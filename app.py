@@ -10,7 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return ("this is the homepage")
+    return '''this is the homepage
+             <p><a href = "/hello"><button>go to hello</button></a></p>'''
 
 
 # hello page
