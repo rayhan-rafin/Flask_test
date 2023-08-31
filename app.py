@@ -17,7 +17,18 @@ def homepage():
 # hello page
 @app.route('/hello')
 def hello():
-    return 'Hello, Im Rayhan'
+    return '''Hello, Im Rayhan
+              <p><a href = "/calculate"><button>calculate</button></a></p>'''
+
+
+# calculate page
+@app.route('/calculate')
+def calculate():
+    return '''<form action="/calculate" method="GET">
+              <input type="int" name="num1">
+              <input type="int" name="num2">
+              <input type="submit">
+              </form>'''
 
 
 # hosting locally; why port 5000?
